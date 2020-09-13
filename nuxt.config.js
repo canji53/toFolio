@@ -1,5 +1,5 @@
 
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? { router: { base: '/gh-pages/' } } : {}
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? { router: { base: '/toFolio/' } } : {}
 const siteName = 'toFolio'
 const siteDescription = 'Canjiのポートフォリオサイトです。出来ることと成果物をリスティングしています。'
 
