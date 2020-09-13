@@ -32,7 +32,8 @@ export default {
     '@nuxt/typescript-build'
   ],
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources'
   ],
   axios: {},
   build: {
