@@ -1,5 +1,6 @@
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? { router: { base: '/toFolio/' } } : {}
+const lang = 'ja'
 const siteName = 'toFolio'
 const siteDescription = 'Canjiのポートフォリオサイトです。出来ることと成果物をリスティングしています。'
 
@@ -8,6 +9,9 @@ export default {
   ssr: false,
   target: 'static',
   head: {
+    htmlAttrs: {
+      lang: lang
+    },
     title: siteName,
     meta: [
       { charset: 'utf-8' },
