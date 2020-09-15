@@ -1,34 +1,35 @@
 <template>
-  <a
-    :href="url"
-    :rel="rel"
-    :target="target"
+  <n-link
+    v-scroll-to="`#${id}`"
+    to
   >
-    <img
-      :src="icon.src"
-      :alt="icon.alt"
-    >
-  </a>
+    <font-awesome-icon
+      :icon="[type, icon]"
+    />
+  </n-link>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
+<script>
+export default {
   props: {
-    url: {
+    id: {
+      type: String,
+      required: true
+    },
+    type: {
+      type: String,
+      required: true
+    },
+    icon: {
       type: String,
       required: true
     }
   },
   data: () => ({
     rel: 'noopener noreferrer',
-    target: '_blank',
-    icon: {
-      src: '/tolog.png',
-      alt: 'ToLog'
-    }
+    target: '_blank'
   })
-})
+}
 </script>
 
 <style lang="scss" scoped>
@@ -49,9 +50,9 @@ a {
     box-shadow: $neumorphism-concave;
   }
 
-  & > img {
-    width: $medium-font-size;
-    height: $medium-font-size;
+  & > svg {
+    font-size: $base-font-size;
+    color: $base-color;
   }
 }
 </style>

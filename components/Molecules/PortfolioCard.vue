@@ -67,18 +67,13 @@ export default Vue.extend({
 
   &__thumbnail {
     width: 50%;
-    padding: 10px;
+    // padding: 10px;
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
     border-radius: 16px;
     background: $concept-color;
-    box-shadow: $neumorphism-convex;
-
-    &:hover {
-      box-shadow: $neumorphism-concave;
-    }
 
     & > img {
       width: 100%;
@@ -97,8 +92,8 @@ export default Vue.extend({
       margin: 16px 0;
 
       & > h1 {
-        line-height: $title-font-size;
-        font-size: $title-font-size;
+        line-height: $medium-font-size;
+        font-size: $medium-font-size;
         color: $base-color;
       }
     }
@@ -119,7 +114,7 @@ export default Vue.extend({
     }
 
     &__description {
-      margin: 16px;
+      margin: 8px;
       align-items: center;
     }
   }

@@ -20,10 +20,10 @@ export default Vue.extend({
   data: () => ({
     title: process.env.siteName,
     navs: [
-      { text: 'Biography', id: 'Biography' },
-      { text: 'Portfolio', id: 'Portfolio' },
-      { text: 'Skills', id: 'Skills' },
-      { text: 'Experience', id: 'Experience' }
+      { id: 'Biography', fontawesome: { type: 'far', icon: 'meh-blank' } },
+      { id: 'Portfolio', fontawesome: { type: 'fas', icon: 'images' } },
+      { id: 'Skills', fontawesome: { type: 'fas', icon: 'tools' }  },
+      { id: 'Experience', fontawesome: { type: 'fas', icon: 'code-branch' }  }
     ]
   })
 })
@@ -52,11 +52,11 @@ header{
     }
 
     & > .siteTitle {
-      margin: 0 auto 0 16px;
+      margin: 0 auto 0 0;
     }
 
     & > .siteNav {
-      margin: 0 16px 0 auto;
+      margin: 0 0 0 auto;
     }
   }
 }

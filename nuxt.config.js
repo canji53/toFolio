@@ -3,6 +3,9 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? { router: { base: '/t
 const lang = 'ja'
 const siteName = 'toFolio'
 const siteDescription = 'Canjiのポートフォリオサイトです。出来ることと成果物をリスティングしています。'
+const siteKeywords = 'portfolio';
+const siteAuthor = 'Canji';
+const siteThemeColor = '#EDEEF0';
 
 export default {
   ...routerBase,
@@ -16,7 +19,10 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: siteDescription }
+      { hid: 'description', name: 'description', content: siteDescription },
+      { hid: 'keywords', name: 'keywords', content: siteKeywords },
+      { hid: 'author', name: 'author', content: siteAuthor },
+      { hid: 'theme-color', name: 'theme-color', content: siteThemeColor}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -56,7 +62,11 @@ export default {
       },
       {
         set: '@fortawesome/free-solid-svg-icons',
-        icons: ['faHome']
+        icons: ['faImages', 'faCodeBranch', 'faTools']
+      },
+      {
+        set: '@fortawesome/free-regular-svg-icons',
+        icons: ['faMehBlank']
       }
     ]
   },

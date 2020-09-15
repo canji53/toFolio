@@ -23,15 +23,6 @@ export default Vue.extend({
 
 <style lang="scss">
 html {
-  // font-family:
-  //   'Source Sans Pro',
-  //   -apple-system,
-  //   BlinkMacSystemFont,
-  //   'Segoe UI',
-  //   Roboto,
-  //   'Helvetica Neue',
-  //   Arial,
-  //   sans-serif;
   font-family:
     Rubik, "Noto Sans JP", sans-serif;
 }

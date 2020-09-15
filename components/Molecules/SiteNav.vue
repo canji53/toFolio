@@ -5,12 +5,11 @@
         v-for="nav in navs"
         :key="nav.id"
       >
-        <n-link
-          v-scroll-to="`#${nav.id}`"
-          to
-        >
-          {{ nav.text }}
-        </n-link>
+        <IconScrollTo
+          :id="nav.id"
+          :type="nav.fontawesome.type"
+          :icon="nav.fontawesome.icon"
+        />
       </li>
     </ul>
   </nav>
@@ -18,7 +17,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import IconScrollTo from '@/components/Atoms/IconScrollTo'
+
 export default Vue.extend({
+  components: {
+    IconScrollTo
+  },
   props: {
     navs: {
       type: Array,

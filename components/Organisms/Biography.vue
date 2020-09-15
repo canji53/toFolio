@@ -63,12 +63,11 @@ export default Vue.extend({
     margin: 8px 0;
     border-radius: 16px;
     background: $concept-color;
-    box-shadow: $neumorphism-convex;
 
     & > img {
       width: 90px;
       height: 90px;
-      border-radius: 16px;
+      border-radius: 50%;
       padding: 10px;
       background-color: #fff;
     }

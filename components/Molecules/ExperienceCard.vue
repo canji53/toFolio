@@ -42,7 +42,6 @@ export default Vue.extend({
 
   & > p {
     margin: 8px 0;
-    line-height: $small-font-size;
     font-size: $small-font-size;
     color: $base-color;
   }

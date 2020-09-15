@@ -31,8 +31,8 @@ export default {
 
 <style lang="scss" scoped>
 a {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   display: flex;
   flex-flow: row;
   justify-content: center;
@@ -48,7 +48,7 @@ a {
   }
 
   & > svg {
-    font-size: $title-font-size;
+    font-size: $medium-font-size;
     color: $base-color;
   }
 }

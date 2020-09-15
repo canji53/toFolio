@@ -1,30 +1,25 @@
 <template>
   <section class="skillCard">
-    <div :class="{
-      'pieChart': true,
-      'pieChart--gt50': isGt50
-    }">
-      <div
-        :class="{
-          'pieChart__progress': true,
-          'pieChart__progress--gt50': isGt50
-        }"
-      >
-        <div
-          v-bind:style="rotateStyle"
-          :class="{
-            'pieChart__progress__fill': true,
-            'pieChart__progress__fill--gt50': isGt50
-          }"
-        />
-      </div>
-      <img
-        :src="src"
-        :alt="title"
-        class="pieChart__icon"
-      >
-    </div>
-    <h1 class="skillCard__title">{{ title }}</h1>
+    <svg
+      :width="length"
+      :height="length"
+      :style="rotateStyle"
+      class="pie"
+    >
+      <circle
+        :r="radius"
+        :cx="center"
+        :cy="center"
+        :style="strokeStyle"
+        class="pie__circle"
+      />
+    </svg>
+    <img
+      :src="src"
+      :alt="title"
+      class="icon"
+    >
+    <h1 class="name">{{ title }}</h1>
   </section>
 </template>
 
@@ -47,30 +42,34 @@ export default Vue.extend({
     }
   },
   data () {
+    const base = 120
+    const radius = base / 4
+    const center = base / 2
+    const strokePercentage = Math.ceil(2*Math.PI*radius)
+    const strokeLength = strokePercentage*this.percent/100
     return {
-      isGt50: this.percent >= 50 ? true : false,
-      rotateStyle: { transform: 'rotate(' + `${360*this.percent/100}` + 'deg)' }
+      length: base,
+      radius: radius,
+      center: center,
+      rotateStyle: {
+        transform: `rotate(-90deg)`
+      },
+      strokeStyle: {
+        strokeWidth: base/2,
+        strokeDasharray: `${strokeLength} ${strokePercentage}`
+      }
     }
   }
 })
 </script>
 
 <style lang="scss" scoped>
-@mixin circle($size) {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50% - #{$size/2});
-  top: calc(50% - #{$size/2});
-  width: $size;
-  height: $size;
-}
-
 .skillCard {
   width: 200px;
   height: 200px;
   margin: 12.5px;
   padding: 20px;
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -78,58 +77,53 @@ export default Vue.extend({
   background-color: $concept-color;
   box-shadow:  $neumorphism-convex;
 
-  &__title {
-    margin: 16px 0;
-    line-height: $base-font-size;
-    font-size: $base-font-size;
+  @include screen ($pc-width, $sp-width) {
+    width: 175px;
+    height: 175px;
+  }
+
+  @include max-screen ($sp-width) {
+    width: 150px;
+    height: 160px;
+  }
+
+  .pie {
+    position: absolute;
+    background: $concept-color;
+    border-radius: 50%;
+    box-shadow: $neumorphism-concave;
+
+    &__circle {
+      fill: $concept-color;
+      stroke: $rotate-color;
+    }
+  }
+
+  .icon {
+    width: 90px;
+    height: 90px;
+    padding: 25px;
+    position: absolute;
+    top: 35px;
+    border-radius: 50%;
+    background-color: $concept-color;
+    box-shadow: $neumorphism-convex;
+  }
+
+  .name {
+    position: absolute;
+    bottom: 30px;
+    line-height: $small-font-size;
+    font-size: $small-font-size;
     color: $base-color;
+
+    @include screen ($pc-width, $sp-width) {
+      bottom: 15px;
+    }
+
+    @include max-screen ($sp-width) {
+      display: none;
+    }
   }
-}
-
-$size: 120px;
-
-.pieChart {
-  width: $size;
-  height: $size;
-  border-radius: 50%;
-  background-color: #fff;
-  position: relative;
-
-  &--gt50 {
-    background-color: $accent-color;
-  }
-}
-
-.pieChart__progress {
-  @include circle($size);
-  clip: rect(0, $size, $size, #{$size/2});
-
-  &--gt50 {
-    clip: rect(0, #{$size/2}, $size, 0);
-  }
-}
-
-.pieChart__progress__fill {
-  @include circle($size);
-  clip: rect(0, #{$size/2}, $size, 0);
-  background: $accent-color;
-
-  &--gt50 {
-    clip: rect(0, $size, $size, #{$size/2});
-    background: #fff;
-  }
-}
-
-.pieChart__icon {
-  width: 100px;
-  height: 100px;
-  padding: 25px;
-  position: absolute;
-  top: 8px;
-  left: 10px;
-  border-radius: 50%;
-  background-color: $concept-color;
-  box-shadow: -5px 5px 10px #c1c9d2, 
-             5px -5px 10px #ffffff;
 }
 </style>

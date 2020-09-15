@@ -33,8 +33,8 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 a {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   display: flex;
   flex-flow: row;
   justify-content: center;
@@ -50,8 +50,8 @@ a {
   }
 
   & > img {
-    width: 20px;
-    height: 20px;
+    width: $medium-font-size;
+    height: $medium-font-size;
   }
 }
 </style>

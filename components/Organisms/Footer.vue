@@ -20,6 +20,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 footer{
-  margin: 24px auto;
+  padding-top: 60px;
+  margin: 32px auto;
 }
 </style>

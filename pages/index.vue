@@ -35,7 +35,7 @@ main {
   & > .portfolio,
   & > .skills,
   & > .experiencce {
-    margin: 48px auto;
+    margin: 60px auto;
   }
 }
 </style>
