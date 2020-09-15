@@ -59,15 +59,16 @@ export default Vue.extend({
   &__icon {
     width: 110px;
     height: 110px;
-    padding: 10px;
+    padding: 4px;
     margin: 8px 0;
     border-radius: 16px;
     background: $concept-color;
+    box-shadow: $neumorphism-convex;
 
     & > img {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
+      width: 102px;
+      height: 102px;
+      border-radius: 16px;
       padding: 10px;
       background-color: #fff;
     }
