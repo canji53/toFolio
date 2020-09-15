@@ -3,7 +3,6 @@
     <h1 :id="title">
       # {{ title }}
     </h1>
-    <!-- <p>{{ description }}</p> -->
     <ul>
       <li
         v-for="portfolio in portfolioList"
@@ -48,7 +47,7 @@ export default Vue.extend({
         url: 'https://www.toitem.info',
         src: `${process.env.baseDir}toitem_eyecatch.png`,
         alt: 'toItem',
-        stack: 'Jamstack, Serverless, PWA, IaC, Vue/Nuxt, Node.js, SCSS, NPM, Gulp, MicroCMS, SendGrid, AWS, SAM, CloudFront, APIGateway, CloudFront(OAI), S3, Lambda, Lambda@Edge, Route53, ACM'
+        stack: 'Jamstack, Serverless, PWA, IaC, Vue/Nuxt, Node.js, SCSS, NPM, Gulp, MicroCMS, SendGrid, AWS, SAM, APIGateway, Lambda, CloudFront(OAI), S3, Lambda@Edge, Route53, ACM'
       }
     ]
   })
