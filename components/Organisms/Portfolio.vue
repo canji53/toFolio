@@ -35,11 +35,11 @@ export default Vue.extend({
     portfolioList: [
       {
         title: 'ToLog',
-        description: 'WEB周りの雑感や備忘録の個人ブログ',
+        description: 'WEB周りの雑感や備忘録',
         url: 'https://www.tolog.site',
         src: `${process.env.baseDir}tolog_eyecatch.png`,
         alt: 'ToLog',
-        stack: 'Jamstack, Serverless, React.js, Gatsby.js, GraphQL, SCSS, NPM, GitHub, Netlify, AWS, Route53, ACM'
+        stack: 'Jamstack, Serverless, React.js, Gatsby.js, GraphQL, SCSS, Netlify, AWS, Route53, ACM'
       },
       {
         title: 'toItem',
@@ -47,7 +47,15 @@ export default Vue.extend({
         url: 'https://www.toitem.info',
         src: `${process.env.baseDir}toitem_eyecatch.png`,
         alt: 'toItem',
-        stack: 'Jamstack, Serverless, PWA, IaC, Vue/Nuxt, Node.js, SCSS, NPM, Gulp, MicroCMS, SendGrid, AWS, SAM, APIGateway, Lambda, CloudFront(OAI), S3, Lambda@Edge, Route53, ACM'
+        stack: 'Jamstack, Serverless, PWA, IaC, Vue/Nuxt, Node.js, SCSS, Gulp, MicroCMS, SendGrid, AWS, SAM, APIGateway, Lambda, CloudFront(OAI), S3, Lambda@Edge, Route53, ACM'
+      },
+      {
+        title: 'toFolio',
+        description: 'Neumorphismに惹かれて勢いで作った当ポートフォリオ。なんか微妙、、、',
+        url: 'https://canji53.github.io/toFolio/',
+        src: `${process.env.baseDir}tofolio_eyecatch.png`,
+        alt: 'toFolio',
+        stack: 'Github Pages, Neumorphism, Vue/Nuxt, SCSS'
       }
     ]
   })
