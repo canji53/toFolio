@@ -1,5 +1,7 @@
 
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? { router: { base: '/toFolio/' } } : {}
+const baseDir = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/toFolio/' : '/'
+const routerBase = { router: { base: baseDir } }
+// const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? { router: { base: '/toFolio/' } } : {}
 const lang = 'ja'
 const siteName = 'toFolio'
 const siteDescription = 'Canjiのポートフォリオサイトです。出来ることと成果物をリスティングしています。'
@@ -25,11 +27,12 @@ export default {
       { hid: 'theme-color', name: 'theme-color', content: siteThemeColor}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: `${baseDir}favicon.ico` }
     ]
   },
   env: {
-    siteName: siteName
+    siteName: siteName,
+    baseDir: baseDir
   },
   css: [
     'ress'

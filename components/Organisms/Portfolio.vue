@@ -38,7 +38,7 @@ export default Vue.extend({
         title: 'ToLog',
         description: 'WEB周りの雑感や備忘録の個人ブログ',
         url: 'https://www.tolog.site',
-        src: '/tolog_eyecatch.png',
+        src: `${process.env.baseDir}tolog_eyecatch.png`,
         alt: 'ToLog',
         stack: 'Jamstack, Serverless, React.js, Gatsby.js, GraphQL, SCSS, NPM, GitHub, Netlify, AWS, Route53, ACM'
       },
@@ -46,7 +46,7 @@ export default Vue.extend({
         title: 'toItem',
         description: 'ガジェットを中心とした超個人的なブログです。',
         url: 'https://www.toitem.info',
-        src: '/toitem_eyecatch.png',
+        src: `${process.env.baseDir}toitem_eyecatch.png`,
         alt: 'toItem',
         stack: 'Jamstack, Serverless, PWA, IaC, Vue/Nuxt, Node.js, SCSS, NPM, Gulp, MicroCMS, SendGrid, AWS, SAM, CloudFront, APIGateway, CloudFront(OAI), S3, Lambda, Lambda@Edge, Route53, ACM'
       }

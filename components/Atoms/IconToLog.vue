@@ -24,7 +24,7 @@ export default Vue.extend({
     rel: 'noopener noreferrer',
     target: '_blank',
     icon: {
-      src: '/tolog.png',
+      src: `${process.env.baseDir}tolog.png`,
       alt: 'ToLog'
     }
   })

@@ -27,18 +27,17 @@ export default Vue.extend({
     title: 'Skills',
     description: '定量化しづらく、あくまで自己評価なので、参考程度に。',
     skills: [
-      { title: 'AWS', icon: '/brand/aws.svg', percent: 60 },
-      { title: 'Jamstack', icon: '/brand/none.svg', percent: 40 },
-      { title: 'Node.js', icon: '/brand/node.png', percent: 50 },
-      { title: 'Nuxt.js', icon: '/brand/nuxt.svg', percent: 50 },
-      { title: 'Gatsby.js', icon: '/brand/gatsby.svg', percent: 25 },
-      { title: 'PHP', icon: '/brand/php.svg', percent: 50 },
-      { title: 'Python', icon: '/brand/python.png', percent: 50 },
-      { title: 'WordPress', icon: '/brand/wordpress.png', percent: 75 },
-      { title: 'Docker', icon: '/brand/docker.png', percent: 60 },
-      { title: 'Nginx', icon: '/brand/nginx.png', percent: 50 },
-      { title: 'Apache', icon: '/brand/apache.svg', percent: 65 },
-      { title: 'MySQL', icon: '/brand/mysql.png', percent: 25 }
+      { title: 'AWS', icon: `${process.env.baseDir}brand/aws.svg`, percent: 60 },
+      { title: 'Node.js', icon: `${process.env.baseDir}brand/node.png`, percent: 40 },
+      { title: 'Nuxt.js', icon: `${process.env.baseDir}brand/nuxt.svg`, percent: 40 },
+      { title: 'Gatsby.js', icon: `${process.env.baseDir}brand/gatsby.svg`, percent: 25 },
+      { title: 'PHP', icon: `${process.env.baseDir}brand/php.svg`, percent: 40 },
+      { title: 'Python', icon: `${process.env.baseDir}brand/python.png`, percent: 40 },
+      { title: 'WordPress', icon: `${process.env.baseDir}brand/wordpress.png`, percent: 60 },
+      { title: 'Docker', icon: `${process.env.baseDir}brand/docker.png`, percent: 50 },
+      { title: 'Nginx', icon: `${process.env.baseDir}brand/nginx.png`, percent: 40 },
+      { title: 'Apache', icon: `${process.env.baseDir}brand/apache.svg`, percent: 55 },
+      { title: 'MySQL', icon: `${process.env.baseDir}brand/mysql.png`, percent: 25 }
     ]
   })
 })
@@ -66,6 +65,8 @@ export default Vue.extend({
   }
 
   & > ul {
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;

@@ -29,7 +29,7 @@ export default Vue.extend({
     name: 'Canji',
     description: '本土最南端で生を受けた二十代後半の男です。クラウド周りをちょこまかしたく奮闘していますが、いつも空回り、フラれ続けています。いくつかの個人メディアを運営しています。',
     icon: {
-      src: '/profile.png',
+      src: `${process.env.baseDir}profile.png`,
       alt: 'canji'
     }
   })
