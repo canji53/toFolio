@@ -67,7 +67,6 @@ export default Vue.extend({
 
   &__thumbnail {
     width: 50%;
-    // padding: 10px;
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -77,7 +76,9 @@ export default Vue.extend({
 
     & > img {
       width: 100%;
+      padding: 4px;
       border-radius: 16px;
+      box-shadow: $neumorphism-convex;
     }
   }
 
