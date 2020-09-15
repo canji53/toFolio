@@ -22,6 +22,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  env: {
+    siteName: siteName
+  },
   css: [
     'ress'
   ],
@@ -33,8 +36,35 @@ export default {
   ],
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-fontawesome',
+    'vue-scrollto/nuxt',
+    'nuxt-webfontloader'
   ],
+  styleResources: {
+    scss: [
+      '@/assets/scss/_variables.scss',
+      '@/assets/scss/_media-queries.scss',
+      '@/assets/scss/_global-styles.scss',
+    ]
+  },
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['faTwitter', 'faInstagram']
+      },
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faHome']
+      }
+    ]
+  },
+  webfontloader: {
+    google: {
+      families: ['Rubik']
+    }
+  },
   axios: {},
   build: {
   }
