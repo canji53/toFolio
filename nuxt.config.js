@@ -8,6 +8,7 @@ const siteDescription = 'Canjiのポートフォリオサイトです。出来�
 const siteKeywords = 'portfolio';
 const siteAuthor = 'Canji';
 const siteThemeColor = '#EDEEF0';
+const iconsDir = '/icons';
 
 export default {
   ...routerBase,
@@ -27,7 +28,17 @@ export default {
       { hid: 'theme-color', name: 'theme-color', content: siteThemeColor}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: `${baseDir}favicon.ico` }
+      // favicon
+      { rel: 'icon', sizes: '16x16', type: 'image/png', href: iconsDir + '/icon-16.png' },
+      { rel: 'icon', sizes: '32x32', type: 'image/png', href: iconsDir + '/icon-32.png' },
+      { rel: 'icon', sizes: '48x48', type: 'image/png', href: iconsDir + '/icon-48.png' },
+      { rel: 'icon', sizes: '72x72', type: 'image/png', href: iconsDir + '/icon-72.png' },
+      { rel: 'icon', sizes: '96x96', type: 'image/png', href: iconsDir + '/icon-96.png' },
+      { rel: 'icon', sizes: '144x144', type: 'image/png', href: iconsDir + '/icon-144.png' },
+      { rel: 'icon', sizes: '192x192', type: 'image/png', href: iconsDir + '/icon-192.png' },
+      { rel: 'icon', sizes: '256x256', type: 'image/png', href: iconsDir + '/icon-256.png' },
+      // apple touch icon
+      { rel: 'apple-touch-icon', sizes: '180x180', href: iconsDir + '/apple-touch-icon.png' },
     ]
   },
   env: {
