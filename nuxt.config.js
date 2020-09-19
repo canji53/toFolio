@@ -8,7 +8,7 @@ const siteDescription = 'Canjiのポートフォリオサイトです。出来�
 const siteKeywords = 'portfolio';
 const siteAuthor = 'Canji';
 const siteThemeColor = '#EDEEF0';
-const iconsDir = '/icons';
+const iconsDir = baseDir + 'icons';
 
 export default {
   ...routerBase,
