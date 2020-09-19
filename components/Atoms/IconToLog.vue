@@ -25,7 +25,7 @@ export default Vue.extend({
     target: '_blank',
     icon: {
       src: `${process.env.baseDir}tolog.png`,
-      alt: 'ToLog'
+      alt: 'toLog'
     }
   })
 })

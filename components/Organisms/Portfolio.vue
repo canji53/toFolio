@@ -34,11 +34,11 @@ export default Vue.extend({
     description: '全て個人的な成果物です。',
     portfolioList: [
       {
-        title: 'ToLog',
+        title: 'toLog',
         description: 'WEB周りの雑感や備忘録',
         url: 'https://www.tolog.site',
         src: `${process.env.baseDir}tolog_eyecatch.png`,
-        alt: 'ToLog',
+        alt: 'toLog',
         stack: 'Jamstack, Serverless, React.js, Gatsby.js, GraphQL, SCSS, Netlify, AWS, Route53, ACM'
       },
       {
