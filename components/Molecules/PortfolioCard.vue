@@ -115,8 +115,12 @@ export default Vue.extend({
     }
 
     &__description {
-      margin: 8px;
-      align-items: center;
+      margin: 8px 0;
+      padding: 0 32px;
+
+      & > a {
+        align-self: center;
+      }
     }
   }
 }
