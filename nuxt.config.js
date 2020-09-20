@@ -49,6 +49,7 @@ export default {
     'ress'
   ],
   plugins: [
+    { src: '@/plugins/ga.js', mode: 'client' }
   ],
   components: true,
   buildModules: [
